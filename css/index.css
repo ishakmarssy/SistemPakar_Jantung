@@ -1,0 +1,172 @@
+
+:root {
+    --primary-color: #2a4fbd; /* Warna utama */
+    --primary-hover-color: #df549a; /* Warna utama saat hover */
+     --secondary-color: #1872e8; /* Warna sekunder */
+    --background-color: #f8f9fa; /* Warna latar belakang */
+    --text-color: #212529; /* Warna teks */
+    --link-hover-color: #ffcc00; /* Warna link saat hover */
+}
+
+body {
+    background-color: var(--background-color);
+    padding-top: 30px; /* Untuk navbar fixed-top */
+    padding-bottom: 60px; /* Untuk footer */
+    }
+
+.card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-bottom: 10px;
+    border-radius: 5px; /* Menambahkan radius pada card */
+    overflow: hidden; /* Agar gambar mengikuti radius card */
+}
+
+.card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    border-radius: 5px; /* Menambahkan radius pada overlay */
+}
+
+.card-body {
+    position: relative;
+    z-index: 2;
+}
+
+.navbar {
+    background-color: #00B4DB;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0083B0, #00B4DB);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0083B0, #00B4DB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.navbar .nav-link {
+    color: white; /* Warna teks link */
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+    color: var(--link-hover-color); /* Warna link saat hover */
+}
+
+.footer {
+    background-color: var(--primary-color); /* Warna utama footer */
+    color: white; /* Warna teks footer */
+}
+
+footer a {
+    color: var(--link-hover-color); /* Warna link di footer */
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline; /* Efek hover pada link */
+}
+.btn-warna {
+    background: #00B4DB;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0083B0, #00B4DB);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0083B0, #00B4DB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    color: white;
+    border-radius: 10px;
+}
+.btn-warna:hover {
+    background: #00B4DB;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #0083B0, #00B4DB);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #0083B0, #00B4DB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: white;
+}
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100%); /* Mulai dari luar layar di sebelah kanan */
+        opacity: 0; /* Transparan */
+        }
+        to {
+            transform: translateX(0); /* Berhenti di posisi normal */
+            opacity: 1; /* Sepenuhnya terlihat */
+            }
+        }
+
+        .main-content {
+            animation: slideInFromRight 0.8s ease-out; /* Terapkan animasi */
+        }
+
+        .list-group-item a {
+            color: #212529;
+            transition: color 0.3s ease;
+        }
+
+        .list-group-item a:hover {
+            color: var(--primary-color);
+        }
+
+        @media (max-width: 768px) {
+            .sidebar {
+                display: none;
+            }
+        }
+
+        .navbar.fixed-bottom {
+            height: 60px; /* Tinggi navbar bawah */
+            background-color: var(--primary-color); /* Warna utama navbar bawah */
+        }
+
+        .navbar.fixed-bottom .nav-link {
+            font-size: 12px; /* Ukuran teks */
+        }
+
+        .navbar.fixed-bottom .bi {
+            font-size: 20px; /* Ukuran ikon */
+        }
+        /* Sidebar card */
+        .card {
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .card-header {
+            font-size: 1.2rem;
+            padding: 1rem;
+            background: var(--primary-color);
+        }
+
+        /* Sidebar menu list */
+        .list-group-item {
+            padding: 15px 20px;
+            border: none;
+            transition: background-color 0.2s ease-in-out;
+        }
+
+        .list-group-item a {
+            color: #333;
+            font-weight: 500;
+            display: block;
+            transition: color 0.2s ease-in-out;
+        }
+
+        /* Hover effect */
+        .list-group-item:hover {
+            background-color: #f0f4ff;
+        }
+
+        .list-group-item:hover a {
+            color: #0d6efd;
+        }
+        .judul{
+            color:rgb(0, 0, 0); /* Warna utama */
+            font-size: 1.35rem;
+            margin-bottom: 20px;
+            font-weight: bold;
+            margin-left: 5px;
+        }

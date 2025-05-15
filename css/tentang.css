@@ -1,0 +1,136 @@
+
+        :root {
+            --primary-color: #3077e9; /* Warna utama */
+            --primary-hover-color: #0056b3; /* Warna utama saat hover */
+            --secondary-color: #6c757d; /* Warna sekunder */
+            --background-color: #f8f9fa; /* Warna latar belakang */
+            --text-color: #212529; /* Warna teks */
+            --link-hover-color: #ffcc00; /* Warna link saat hover */
+        }
+
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+            padding-bottom: 70px; /* Untuk bottom */
+            padding-top: 30px; /* Untuk navbar fixed-top */
+        }
+
+        .content {
+            margin-top: 20px; /* Sesuaikan dengan tinggi navbar */
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-hover-color);
+        }
+
+        .navbar {
+            background-color:   #00B4DB;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #0083B0, #00B4DB);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #0083B0, #00B4DB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        }
+
+        .navbar .nav-link {
+            color: white; /* Warna teks link */
+            transition: color 0.3s ease;
+        }
+
+        .navbar .nav-link:hover {
+            color: var(--link-hover-color); /* Warna link saat hover */
+        }
+
+        .navbar.fixed-bottom {
+            height: 60px; /* Tinggi navbar bawah */
+            background-color: var(--primary-color); /* Warna utama navbar bawah */
+        }
+
+        .navbar.fixed-bottom .nav-link {
+            font-size: 12px; /* Ukuran teks */
+        }
+
+        .navbar.fixed-bottom .bi {
+            font-size: 20px; /* Ukuran ikon */
+        }
+
+        @keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+        /* Animasi fade-in saat halaman dimuat */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Foto profil dengan bingkai dan efek putar */
+.profile-card .card-img-top {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #ffffff;
+    margin-top: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 1s ease;
+}
+
+/* Efek berputar saat hover */
+.profile-card:hover .card-img-top {
+    transform: rotate(360deg);
+}
+
+/* Container animasi */
+.profile-card {
+    background: linear-gradient(270deg, #1a2a6c, #b21f1f, #fdbb2d); /* Multi-warna (biru, merah, kuning) */
+    background-size: 600% 600%;
+    animation: gradientMove 10s ease infinite, fadeInUp 1s ease-out;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+
+/* Styling gambar profil */
+.profile-card .card-img-top {
+    border: 4px solid #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 1s ease-in-out;
+}
+
+/* Hover pada gambar */
+.profile-card:hover .card-img-top {
+    transform: scale(1.05);
+    transform: rotate(360deg);
+}
+.profile-photo {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 1s ease-in-out;
+    z-index: 2;
+}

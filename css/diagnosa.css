@@ -1,0 +1,126 @@
+
+        :root {
+            --primary-color: #2a4fbd;
+            --primary-hover-color: #0056b3;
+            --secondary-color: #e84118;
+            --background-color: rgb(255, 255, 255);
+            --text-color: #212529;
+            --link-hover-color: #ffcc00;
+        }
+        body {
+            background-color: var(--background-color);
+            padding-top: 20px;
+            padding-bottom: 120px;
+        }
+        .card {
+            margin-bottom: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .card:hover {
+            transform: scale(1.01);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .card-title {
+            font-size: 0.9rem;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+        .form-check-label {
+            font-size: 0.8rem;
+            color: rgb(244, 15, 15);
+        }
+        .btn-primary {
+            background-color: var(--primary-color);
+            border: none;
+            border-radius: 50px;
+            width: 50%;
+            padding: 10px;
+            font-size: 1.0rem;
+            position: fixed;  /* Posisi tetap di bawah */
+            bottom: 70px;  /* Tombol berada di bawah layar dengan jarak 20px */
+            /* left: 50%;  Posisikan tombol di tengah layar secara horizontal */
+            transform: translateX(-50%); /* Koreksi posisi agar benar-benar di tengah */
+            
+        }
+        .btn-primary:hover {
+            background-color: var(--primary-color);
+        }
+        .navbar {
+            background-color: #00B4DB;
+            background: -webkit-linear-gradient(to right, #0083B0, #00B4DB);
+            background: linear-gradient(to right, #0083B0, #00B4DB);
+        }
+        .navbar .nav-link {
+            color: white;
+            transition: color 0.3s ease;
+        }
+        .navbar .nav-link:hover {
+            color: var(--link-hover-color);
+        }
+        .sticky-button {
+            position: fixed;
+            bottom: 70px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+        }
+        .main-content {
+            animation: fadeIn 1s ease-out;
+        }
+        .navbar.fixed-bottom {
+            height: 60px;
+            background-color: var(--primary-color);
+        }
+        .navbar.fixed-bottom .nav-link {
+            font-size: 12px;
+        }
+        .navbar.fixed-bottom .bi {
+            font-size: 20px;
+        }
+        /* Container horizontal */
+.gejala-options {
+    display: flex;
+    gap: 20px;
+}
+.gejala{
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: green;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Semua opsi */
+.form-check {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Warna khusus per pilihan */
+.form-check.kurang label {
+    background-color:rgb(215, 248, 220);
+    color:rgb(28, 114, 101);
+    padding: 6px 10px;
+    border-radius: 5px;
+}
+
+.form-check.sering label {
+    background-color: #fff3cd;
+    color: #856404;
+    padding: 6px 10px;
+    border-radius: 5px;
+}
+
+.form-check.sangat label {
+    background-color:rgb(237, 212, 212);
+    color:rgb(126, 39, 39);
+    padding: 6px 10px;
+    border-radius: 5px;
+}
+
+/* Tambahan efek saat hover */
+.form-check label:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}

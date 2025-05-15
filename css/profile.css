@@ -1,0 +1,73 @@
+:root {
+    --primary-color: #bd2a73; /* Warna utama */
+    --primary-hover-color: #0056b3; /* Warna utama saat hover */
+    --secondary-color: #6c757d; /* Warna sekunder */
+    --background-color: #f8f9fa; /* Warna latar belakang */
+    --text-color: #212529; /* Warna teks */
+    --link-hover-color: #ffcc00; /* Warna link saat hover */
+}
+
+body {
+    background-color: var(--background-color);
+    padding-top: 50px; /* Untuk navbar fixed-top */
+}
+
+.profile-cover {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid white;
+    margin-top: -75px;
+}
+
+footer {
+    background-color: var(--primary-color); /* Warna utama footer */
+    color: white; /* Warna teks footer */
+}
+
+footer a {
+    color: var(--link-hover-color); /* Warna link di footer */
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline; /* Efek hover pada link */
+}
+
+.navbar {
+    background-color: #00B4DB;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0083B0, #00B4DB);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0083B0, #00B4DB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.navbar .nav-link {
+    color: white; /* Warna teks link */
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+    color: var(--link-hover-color); /* Warna link saat hover */
+}
+
+.navbar.fixed-bottom {
+    height: 60px; /* Tinggi navbar bawah */
+    background-color: #00B4DB;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0083B0, #00B4DB);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0083B0, #00B4DB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.navbar.fixed-bottom .nav-link {
+    font-size: 12px; /* Ukuran teks */
+}
+
+.navbar.fixed-bottom .bi {
+    font-size: 20px; /* Ukuran ikon */
+}

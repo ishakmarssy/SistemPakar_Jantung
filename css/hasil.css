@@ -1,0 +1,52 @@
+body {
+    background-color: #f8f9fa;
+    padding-top: 30px; /* Untuk navbar fixed-top */
+    padding-bottom: 60px; /* Untuk footer */
+}
+.container-hasil {
+    
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h2 {
+    color: #343a40;
+}
+a {
+    text-decoration: none;
+    color: #007bff;
+}
+.navbar {
+    background-color: #00B4DB;
+    background: -webkit-linear-gradient(to right, #0083B0, #00B4DB);
+    background: linear-gradient(to right, #0083B0, #00B4DB);
+}
+.navbar .nav-link {
+    color: white;
+    transition: color 0.3s ease;
+}
+.navbar .nav-link:hover {
+    color: var(--link-hover-color);
+}
+.sticky-button {
+    position: fixed;
+    bottom: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+}
+.main-content {
+    animation: fadeIn 1s ease-out;
+}
+.navbar.fixed-bottom {
+    height: 60px;
+    background-color: var(--primary-color);
+}
+.navbar.fixed-bottom .nav-link {
+    font-size: 12px;
+}
+.navbar.fixed-bottom .bi {
+    font-size: 20px;
+}

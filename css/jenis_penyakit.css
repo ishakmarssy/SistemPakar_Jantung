@@ -1,0 +1,152 @@
+        :root {
+            --primary-color: #bd2a73; /* Warna utama */
+            --primary-hover-color: #0056b3; /* Warna utama saat hover */
+            --secondary-color: #6c757d; /* Warna sekunder */
+            --background-color: #f8f9fa; /* Warna latar belakang */
+            --text-color: #212529; /* Warna teks */
+            --link-hover-color: #ffcc00; /* Warna link saat hover */
+            --card-hover-shadow: rgba(0, 0, 0, 0.2); /* Bayangan saat hover */
+        }
+
+        body {
+            background-color: var(--background-color); /* Warna latar belakang */
+            padding-top: 20px; /* Untuk navbar fixed-top */
+            padding-bottom: 30px; /* Untuk navbar fixed-bottom */
+            color: var(--text-color); /* Warna teks */
+        }
+
+        .card {
+            margin-bottom: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card-title {
+            font-size: 1.0rem; /* Ukuran font judul */
+            color: var(--text-color); /* Warna teks judul */
+        }
+
+        .card:hover {
+            transform: scale(1.00);
+            box-shadow: 0 8px 16px var(--card-hover-shadow); /* Gunakan variabel untuk bayangan */
+        }
+
+        .arrow-right {
+            position: absolute;
+            top: 50%;
+            right: 15px;
+            transform: translateY(-50%);
+            font-size: 1.5rem;
+            color: var(--primary-color); /* Warna utama */
+            transition: color 0.3s;
+        }
+
+        .card:hover .arrow-right {
+            color: var(--primary-hover-color); /* Warna saat hover */
+        }
+
+        .navbar {
+            background-color: #00B4DB;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #0083B0, #00B4DB);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #0083B0, #00B4DB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        }
+
+        .navbar .nav-link {
+            color: white; /* Warna teks link */
+            transition: color 0.3s ease;
+        }
+
+        .navbar .nav-link:hover {
+            color: var(--link-hover-color); /* Warna link saat hover */
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0; /* Mulai dari transparan */
+                transform: translateY(20px); /* Geser sedikit ke bawah */
+            }
+            to {
+                opacity: 1; /* Sepenuhnya terlihat */
+                transform: translateY(0); /* Kembali ke posisi normal */
+            }
+        }
+
+        .main-content {
+            animation: fadeIn 1s ease-out; /* Terapkan animasi */
+        }
+
+        .navbar.fixed-bottom {
+            height: 60px; /* Tinggi navbar bawah */
+            background-color: var(--primary-color); /* Warna utama navbar bawah */
+        }
+
+        .navbar.fixed-bottom .nav-link {
+            font-size: 12px; /* Ukuran teks */
+        }
+
+        .navbar.fixed-bottom .bi {
+            font-size: 20px; /* Ukuran ikon */
+        }
+
+        /* Modal Header */
+        .modal-header {
+            background-color: #00B4DB;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #0083B0, #00B4DB);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #0083B0, #00B4DB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+            color: white; /* Warna teks */
+            border-bottom: 2px solid var(--secondary-color); /* Garis bawah */
+        }
+
+        .modal-title {
+            font-size: 1rem; /* Ukuran font judul modal */
+            font-weight: bold; /* Teks tebal */
+        }
+
+        .btn-close {
+            color: white; /* Warna tombol close */
+            opacity: 5; /* Pastikan tombol terlihat jelas */
+        }
+
+        /* Modal Body */
+        .modal-body {
+            font-size: 1rem; /* Ukuran font isi modal */
+            color: var(--text-color); /* Warna teks */
+            line-height: 1.6; /* Jarak antar baris */
+            padding: 20px; /* Padding isi modal */
+        }
+
+        /* Modal Footer */
+        .modal-footer {
+            background-color: var(--background-color); /* Warna latar belakang footer */
+            border-top: 1px solid #ddd; /* Garis atas */
+            padding: 15px; /* Padding footer */
+        }
+
+        .modal-footer .btn {
+            border-radius: 8px; /* Sudut membulat */
+            padding: 10px 20px; /* Padding tombol */
+            font-size: 1rem; /* Ukuran font tombol */
+        }
+
+        .modal-footer .btn-secondary {
+            background-color: var(--secondary-color); /* Warna tombol tutup */
+            color: white; /* Warna teks tombol */
+            border: none; /* Hilangkan border */
+            transition: background-color 0.3s ease; /* Efek transisi */
+        }
+
+        .modal-footer .btn-secondary:hover {
+            background-color: #c0392b; /* Warna saat hover */
+        }
+
+        /* Responsif untuk layar kecil */
+        @media (max-width: 576px) {
+            .modal-dialog {
+                margin: 10px; /* Margin untuk layar kecil */
+            }
+
+            .modal-content {
+                border-radius: 10px; /* Sudut membulat */
+            }
+        }
